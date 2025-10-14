@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "William's portfolio",
   description:
-    "William Ruan's personal portfolio showcasing front-end development and UI/UX design expertise",
+    "William's personal portfolio showcasing front-end development and UI/UX design expertise",
   icons: {
     icon: "/i-con.png", // /public path
   },

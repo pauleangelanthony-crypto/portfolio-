@@ -4,7 +4,7 @@ import type React from "react";
 
 import { useEffect, useState, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ChevronDown, Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { ChevronDown, Github, Linkedin, Mail, Link } from "lucide-react";
 import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
@@ -84,7 +84,7 @@ export default function Portfolio() {
             transition={{ duration: 0.5 }}
             className="text-2xl font-bold relative"
           >
-            <span className="text-purple-500">William Ruan</span>
+            <span className="text-purple-500">William</span>
             <motion.div
               className="absolute -bottom-1 left-0 h-[2px] bg-purple-500"
               initial={{ width: 0 }}
@@ -380,11 +380,11 @@ export default function Portfolio() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <div className="bg-gray-800 px-4 py-2 rounded-full">
-                  <span className="text-purple-500 font-medium">8+</span> Years
+                  <span className="text-purple-500 font-medium">10+</span> Years
                   Experience
                 </div>
                 <div className="bg-gray-800 px-4 py-2 rounded-full">
-                  <span className="text-purple-500 font-medium">40+</span>{" "}
+                  <span className="text-purple-500 font-medium">40+</span>&nbsp;
                   Projects Completed
                 </div>
                 <div className="bg-gray-800 px-4 py-2 rounded-full">
@@ -700,41 +700,40 @@ export default function Portfolio() {
                 </div>
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center">
-                    <Mail className="h-5 w-5 text-purple-500" />
+                    <Github className="h-5 w-5 text-purple-500" />
+                  </div>
+                  <div>
+                    <h4 className="text-gray-400 text-sm">Github</h4>
+                    <motion.a
+                      key="github"
+                      href="https://github.com/jupiter221208"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ y: -5 }}
+                      className="hover:text-purple-500 transition-colors font-medium"
+                    >
+                      https://github.com/jupiter221208
+                    </motion.a>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center">
+                    <Link className="h-5 w-5 text-purple-500" />
                   </div>
                   <div>
                     <h4 className="text-gray-400 text-sm">Website</h4>
-                    <p className="font-medium">portfolio website url</p>
+                    <motion.a
+                      key="github"
+                      href="https://github.com/jupiter221208"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ y: -5 }}
+                      className="hover:text-purple-500 transition-colors font-medium"
+                    >
+                      https://github.com/jupiter221208
+                    </motion.a>
                   </div>
                 </div>
-              </div>
-
-              <h3 className="text-2xl font-bold mt-10 mb-6">Follow Me</h3>
-              <div className="flex space-x-4">
-                {[
-                  {
-                    icon: <Github className="h-5 w-5" />,
-                    name: "GitHub",
-                    link: "https://github.com/jupiter221208",
-                  },
-                  {
-                    icon: <Linkedin className="h-5 w-5" />,
-                    name: "LinkedIn",
-                    link: "https://www.linkedin.com/",
-                  },
-                ].map((social) => (
-                  <motion.a
-                    key={social.name}
-                    href={social.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ y: -5 }}
-                    className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover:bg-purple-500/20 hover:text-purple-500 transition-colors"
-                  >
-                    {social.icon}
-                    <span className="sr-only">{social.name}</span>
-                  </motion.a>
-                ))}
               </div>
             </motion.div>
 
@@ -830,7 +829,8 @@ export default function Portfolio() {
               className="mb-4 md:mb-0"
             >
               <div className="text-2xl font-bold">
-                <span className="text-purple-500">William</span>Portfolio
+                <span className="text-purple-500">William</span>
+                &nbsp;Portfolio
               </div>
             </motion.div>
             <motion.div
