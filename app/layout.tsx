@@ -14,10 +14,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "William's portfolio",
-  description:
-    "William's personal portfolio showcasing front-end development and UI/UX design expertise",
+  description: "William's personal portfolio showcasing full stack development",
   icons: {
-    icon: "/i-con.png", // /public path
+    icon: [{ url: "/logo.svg" }],
+    apple: [{ url: "/logo.svg" }],
   },
 };
 

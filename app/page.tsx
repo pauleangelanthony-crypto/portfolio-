@@ -115,8 +115,8 @@ export default function Portfolio() {
                     <span
                       className={`relative z-10 ${
                         activeSection === item.name.toLowerCase()
-                          ? "text-purple-300"
-                          : "text-gray-300 group-hover:text-white"
+                          ? "text-purple-500 font-bold"
+                          : "text-gray-200 group-hover:text-white"
                       }`}
                     >
                       {item.name}
@@ -528,65 +528,89 @@ export default function Portfolio() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: "E-Commerce Marketplace",
+                title: "Kids AI Story",
                 description:
-                  "A sophisticated e-commerce platform featuring seamless cart functionality, secure payment integration, and a user-friendly interface designed to enhance the shopping experience.",
-                image: "e-commerce.png?height=600&width=800",
+                  "KidsAIStory is a tool that enables users to create illustrated children's stories using AI technology. It offers a user-friendly interface where individuals can easily generate new stories, as well as access their story history.",
+                image: "01.png?height=600&width=800",
                 tags: [
-                  "React",
                   "Next.js",
                   "Tailwind CSS",
-                  "Stripe",
-                  "Firebase",
+                  "OpenAI",
+                  "LLM Prompt",
+                  "Vercel",
                 ],
-                link: "https://github.com/jupiter221208",
+                link: "https://kidsaistory.com/",
               },
               {
-                title: "Portfolio",
+                title:
+                  "Travel Itinerary Chatbot - Widget and WhatsApp Integration",
                 description:
-                  "A dynamic portfolio website for a front-end developer, featuring responsive design, interactive elements, and smooth animations to showcase my skills and projects effectively.",
-                image: "/portfolio.png?height=600&width=800",
-                tags: ["React", "Framer Motion", "GSAP", "Three.js"],
-                link: "https://github.com/jupiter221208",
-              },
-              {
-                title: "E-Sports Tournament Hub",
-                description:
-                  "A comprehensive platform for e-sports tournaments, featuring real-time live streaming, interactive leaderboards, and detailed match statistics.",
-                image: "/e-sport.png?height=600&width=800",
-                tags: ["React", "TypeScript", "Chart.js", "Socket.io"],
-                link: "https://github.com/jupiter221208",
-              },
-              {
-                title: "Gamified Learning App",
-                description:
-                  "A mobile application designed to enhance student engagement through gamification, offering interactive lessons, rewards, and progress tracking.",
-                image: "/gamified.png?height=600&width=800",
-                tags: ["React Native", "Redux", "Styled Components", "Expo"],
-                link: "https://github.com/jupiter221208",
-              },
-              {
-                title: "SaaS Product Landing Page",
-                description:
-                  "A visually appealing and high-converting landing page for a SaaS product, utilizing animations and clear calls-to-action to drive user engagement and conversions.",
-                image: "/landing.png?height=600&width=800",
-                tags: ["HTML", "CSS", "JavaScript", "GSAP", "AOS"],
-                link: "https://github.com/jupiter221208",
-              },
-              {
-                title: "Twitchie - Video Sharing Platform",
-                description:
-                  "A full-stack application that allows users to create, share, and discover short video clips, similar to YouTube, with a focus on community engagement and content discovery.with payment integration.",
-                image: "/twitchie.png?height=600&width=800",
+                  "This Gen-AI Travel Itinerary Chatbot, deployed as a website widget and on WhatsApp, delivers personalized travel planning and recommendations to seamlessly enhance the user experience.",
+                image: "/02.png?height=600&width=800",
                 tags: [
-                  "PHP",
-                  "HTML",
-                  "CSS",
-                  "Tailwind CSS",
-                  "JavaScript",
+                  "ChatGPT API",
+                  "Chatbot Integration",
+                  "WhatsApp",
+                  "AI Chatbot",
+                  "Generative AI",
+                ],
+                link: "https://www.traveladvocates.com/",
+              },
+              {
+                title: "Twine Agent - AI Agent for Twine",
+                description:
+                  "Twine is an AI assistant tool designed to help businesses manage missed calls and follow up with potential clients. When a call is missed, Twine automatically messages the customer, determines their service requirements, and books them on the business owner's calendar.",
+                image: "/03.png?height=600&width=800",
+                tags: [
+                  "AI Agent Development",
+                  "AI App Development",
+                  "Next.js",
+                  "SMS Gateway",
+                  "Twilio API",
+                ],
+                link: "https://usetwine.com/",
+              },
+              {
+                title: "AI WebRTC Video Conference",
+                description:
+                  "Video Conferencing with AI to boost sales platform. The client approached us with existing software tailored for sales managers to create presentations and share links with clients.",
+                image: "/04.png?height=600&width=800",
+                tags: [
+                  "Node.js",
+                  "Video Streaming",
+                  "Streaming Platform",
+                  "WebRTC",
+                  "Next.js",
+                ],
+                link: "https://www.meetric.com/",
+              },
+              {
+                title: "AI Contract Red-Flag Analysis SAAS Platform",
+                description:
+                  "Built and delivered a full-stack SaaS platform that scans contracts for risks and provides AI-powered red-flag analysis. Helped the client move from a broken MVP to a production-ready app with clear roadmap for Phase 2 (AI agent + custom docs).",
+                image: "/05.png?height=600&width=800",
+                tags: [
+                  "React.js",
+                  "Node.js",
+                  "PostgreSQL",
+                  "OpenAI",
+                  "Framer Motion",
+                ],
+                link: "https://aelaai.com/",
+              },
+              {
+                title: "Echoes - GPS-triggered soundwalk app",
+                description:
+                  "Echoes app allows you to explore what's nearby and listen to incredible tours from our community. Check back often to see new content being added! You can easily download individual tours and save them offline for patchy connectivity.",
+                image: "/06.png?height=600&width=800",
+                tags: [
+                  "React Native",
+                  "Android App",
+                  "IOS App",
+                  "Typescript",
                   "MySQL",
                 ],
-                link: "https://github.com/jupiter221208",
+                link: "https://echoes.xyz/",
               },
             ].map((project, index) => (
               <motion.div
@@ -631,7 +655,7 @@ export default function Portfolio() {
             ))}
           </div>
 
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
@@ -647,7 +671,7 @@ export default function Portfolio() {
                 View All Projects
               </a>
             </Button>
-          </motion.div>
+          </motion.div> */}
         </div>
       </section>
 
