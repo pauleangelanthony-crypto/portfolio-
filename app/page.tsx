@@ -723,14 +723,14 @@ export default function Portfolio() {
                   <div>
                     <h4 className="text-gray-400 text-sm">Website</h4>
                     <motion.a
-                      key="github"
-                      href="https://github.com/jupiter221208"
+                      key="website"
+                      href="https://williamruan.vercel.app/"
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ y: -5 }}
                       className="hover:text-purple-500 transition-colors font-medium"
                     >
-                      https://github.com/jupiter221208
+                      https://williamruan.vercel.app/
                     </motion.a>
                   </div>
                 </div>
