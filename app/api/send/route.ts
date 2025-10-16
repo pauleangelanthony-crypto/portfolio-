@@ -23,7 +23,7 @@ export async function POST(request: Request) {
       to,
       subject: subject || `Message from ${name || "website"}`,
       text: message,
-      html: `<div>User Name:<strong>${name || ""}</strong></div><div>Email: ${
+      html: `<div>User Name: <strong>${name || ""}</strong></div><div>Email: ${
         from || ""
       }</div><div>Message: ${message || ""}</div>`,
     };
