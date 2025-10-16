@@ -4,7 +4,7 @@ import type React from "react";
 
 import { useEffect, useState, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ChevronDown, Github, Linkedin, Mail, Link } from "lucide-react";
+import { ChevronDown, Github, Mail, Link } from "lucide-react";
 import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
@@ -439,13 +439,13 @@ export default function Portfolio() {
                 { name: "Tailwind CSS", level: 92 },
                 { name: "Express.js", level: 90 },
                 { name: "AI Agent", level: 88 },
-                { name: "OpenAI", level: 85 },
-                { name: "ComfyUI", level: 82 },
-                { name: "Python", level: 80 },
-                { name: "Node.js", level: 75 },
-                { name: "MongoDB", level: 70 },
-                { name: "PostgreSQL", level: 65 },
-                { name: "Docker", level: 60 },
+                { name: "OpenAI", level: 87 },
+                { name: "ComfyUI", level: 85 },
+                { name: "Python", level: 84 },
+                { name: "Node.js", level: 79 },
+                { name: "MongoDB", level: 76 },
+                { name: "PostgreSQL", level: 75 },
+                { name: "Docker", level: 72 },
               ].map((skill, index) => (
                 <div key={skill.name} className="mb-6">
                   <div className="flex justify-between mb-2">
