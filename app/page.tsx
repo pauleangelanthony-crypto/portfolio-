@@ -29,6 +29,13 @@ export default function Portfolio() {
   const opacity1 = useTransform(scrollY, [0, 300, 500], [1, 0.5, 0]);
   const opacity2 = useTransform(scrollY, [300, 500, 700], [0, 0.5, 1]);
 
+  // send email configuration
+  const [recievedEmail, setRecievedEmail] = useState("jupiter221208@gmail.com");
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
   // Intersection observer for active section
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -71,6 +78,29 @@ export default function Portfolio() {
     { name: "Contact", ref: contactRef },
   ];
 
+  // email send (call server API route)
+  const handleSendMessage = async () => {
+    try {
+      const res = await fetch('/api/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          to: recievedEmail,
+          from: email,
+          subject,
+          message,
+          name: username,
+        }),
+      });
+
+      if (!res.ok) {
+        const text = await res.text();
+        console.error('send failed', text);
+      }
+    } catch (error) {
+      console.error('message sending error:', error);
+    }
+  };
   return (
     <div className="bg-black text-white min-h-screen overflow-x-hidden">
       <MouseTrail />
@@ -783,6 +813,8 @@ export default function Portfolio() {
                       id="name"
                       className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
                       placeholder="Your Name"
+                      value={username}
+                      onChange={(event) => setUsername(event.target.value)}
                     />
                   </div>
                   <div className="space-y-2">
@@ -797,6 +829,8 @@ export default function Portfolio() {
                       id="email"
                       className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
                       placeholder="Your Email"
+                      value={email}
+                      onChange={(event) => setEmail(event.target.value)}
                     />
                   </div>
                 </div>
@@ -812,6 +846,8 @@ export default function Portfolio() {
                     id="subject"
                     className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
                     placeholder="Subject"
+                    value={subject}
+                    onChange={(event) => setSubject(event.target.value)}
                   />
                 </div>
                 <div className="space-y-2">
@@ -826,12 +862,15 @@ export default function Portfolio() {
                     rows={5}
                     className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
                     placeholder="Your Message"
+                    value={message}
+                    onChange={(event) => setMessage(event.target.value)}
                   />
                 </div>
                 <Button
                   type="submit"
                   size="lg"
                   className="w-full bg-purple-600 hover:bg-purple-700"
+                  onClick={() => handleSendMessage()}
                 >
                   Send Message
                 </Button>
