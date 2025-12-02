@@ -30,7 +30,7 @@ export default function Portfolio() {
   const opacity2 = useTransform(scrollY, [300, 500, 700], [0, 0.5, 1]);
 
   // send email configuration
-  const [recievedEmail, setRecievedEmail] = useState("jupiter221208@gmail.com");
+  const [recievedEmail, setRecievedEmail] = useState("senior101868@gmail.com");
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
@@ -114,7 +114,7 @@ export default function Portfolio() {
             transition={{ duration: 0.5 }}
             className="text-2xl font-bold relative"
           >
-            <span className="text-purple-500">William</span>
+            <span className="text-purple-500">Jupiter</span>
             <motion.div
               className="absolute -bottom-1 left-0 h-[2px] bg-purple-500"
               initial={{ width: 0 }}
@@ -392,7 +392,7 @@ export default function Portfolio() {
                 Full-Stack Developer & AI Integration Specialist
               </h3>
               <p className="text-gray-300 mb-6">
-                I'm William, a dedicated full-stack developer with deep
+                I'm Jupiter, a dedicated full-stack developer with deep
                 expertise in modern web technologies like Next.js, Tailwind CSS,
                 Express.js, and advanced AI integrations including OpenAI and AI
                 Agent development. My passion lies in crafting intuitive,
@@ -749,7 +749,7 @@ export default function Portfolio() {
                   </div>
                   <div>
                     <h4 className="text-gray-400 text-sm">Email</h4>
-                    <p className="font-medium">jupiter221208@gmail.com</p>
+                    <p className="font-medium">senior101868@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
@@ -778,13 +778,13 @@ export default function Portfolio() {
                     <h4 className="text-gray-400 text-sm">Website</h4>
                     <motion.a
                       key="website"
-                      href="https://williamruan.vercel.app/"
+                      href="https://Jupiterruan.vercel.app/"
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ y: -5 }}
                       className="hover:text-purple-500 transition-colors font-medium"
                     >
-                      https://williamruan.vercel.app/
+                      https://Jupiterruan.vercel.app/
                     </motion.a>
                   </div>
                 </div>
@@ -892,7 +892,7 @@ export default function Portfolio() {
               className="mb-4 md:mb-0"
             >
               <div className="text-2xl font-bold">
-                <span className="text-purple-500">William</span>
+                <span className="text-purple-500">Jupiter</span>
                 &nbsp;Portfolio
               </div>
             </motion.div>
@@ -903,7 +903,7 @@ export default function Portfolio() {
               viewport={{ once: true }}
               className="text-gray-400 text-sm"
             >
-              © {new Date().getFullYear()} William Portfolio. All rights
+              © {new Date().getFullYear()} Jupiter Portfolio. All rights
               reserved.
             </motion.div>
           </div>

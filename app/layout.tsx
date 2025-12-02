@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "William's portfolio",
-  description: "William's personal portfolio showcasing full stack development",
+  title: "Jupiter's portfolio",
+  description: "Jupiter's personal portfolio showcasing full stack development",
   icons: {
     icon: [{ url: "/logo.svg" }],
     apple: [{ url: "/logo.svg" }],
