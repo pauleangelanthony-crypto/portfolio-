@@ -4,7 +4,7 @@ import type React from "react";
 
 import { useEffect, useState, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ChevronDown, Github, Mail, Link } from "lucide-react";
+import { ChevronDown, Github, Mail, Link, Download } from "lucide-react";
 import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
@@ -314,6 +314,17 @@ export default function Portfolio() {
               >
                 Contact Me
               </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-purple-500 text-purple-400 hover:bg-purple-500/10 hover:text-purple-300 flex items-center gap-2"
+                asChild
+              >
+                <a href="/JUPITER-PAULE-Full-Stack-AI-Developer-resume.pdf" download>
+                  <Download className="h-4 w-4" />
+                  Download Resume
+                </a>
+              </Button>
             </motion.div>
           </motion.div>
         </div>
@@ -408,7 +419,7 @@ export default function Portfolio() {
                 ensure every project exceeds client expectations and delights
                 users.
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 items-center">
                 <div className="bg-gray-800 px-4 py-2 rounded-full">
                   <span className="text-purple-500 font-medium">10+</span> Years
                   Experience
@@ -421,6 +432,16 @@ export default function Portfolio() {
                   <span className="text-purple-500 font-medium">30+</span> Happy
                   Clients
                 </div>
+                <Button
+                  size="lg"
+                  className="bg-purple-600 hover:bg-purple-700 text-white flex items-center gap-2"
+                  asChild
+                >
+                  <a href="/resume.pdf" download>
+                    <Download className="h-4 w-4" />
+                    Download Resume
+                  </a>
+                </Button>
               </div>
             </motion.div>
           </div>
