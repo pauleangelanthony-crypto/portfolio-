@@ -778,13 +778,13 @@ export default function Portfolio() {
                     <h4 className="text-gray-400 text-sm">Website</h4>
                     <motion.a
                       key="website"
-                      href="https://Jupiterruan.vercel.app/"
+                      href="https://jupiter-rouge.vercel.app/"
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ y: -5 }}
                       className="hover:text-purple-500 transition-colors font-medium"
                     >
-                      https://Jupiterruan.vercel.app/
+                      https://jupiter-rouge.vercel.app/
                     </motion.a>
                   </div>
                 </div>
